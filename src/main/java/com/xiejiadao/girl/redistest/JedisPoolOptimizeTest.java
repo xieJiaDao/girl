@@ -12,6 +12,15 @@ import redis.clients.jedis.JedisPool;
 public class JedisPoolOptimizeTest {
     public static void main(String[] args) {
 //        NotRecommendJedisPoolUsage();
+        RecommendJedisPoolUsage();
+    }
+
+    /**
+     * 推荐JedisPool用法
+     * 好借好还，再借不难。
+     * 在finally 先判断jedis不为null,再close归还。
+     */
+    private static void RecommendJedisPoolUsage() {
         JedisPool jedisPool = null;
         Jedis jedis = null;
         for (int i = 0; i < 10; i++) {
@@ -31,7 +40,6 @@ public class JedisPoolOptimizeTest {
         Jedis jedis1 = jedisPool.getResource();
         jedis1.auth("123456");
         log.info("ping返回：{}", jedis1.ping());
-
     }
 
     /**
