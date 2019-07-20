@@ -1,0 +1,17 @@
+#jpa
+
+
+girl:
+  cupSize: F
+  age: 26
+  content: "cupSize:${cupSize}, age:${age}"
+spring:
+  datasource:
+    driver-class-name:  com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/blog
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true #看sql语句日志
