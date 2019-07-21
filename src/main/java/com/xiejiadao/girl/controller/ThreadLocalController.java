@@ -16,6 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class ThreadLocalController {
 
     /**
+     * 通过RequestHolder中的成员变量ThreadLocal 获取保存的线程ID
+     *
+     * 实际中可以保存用户信息，以便于在项目中去获取
      *
      * @return
      */
