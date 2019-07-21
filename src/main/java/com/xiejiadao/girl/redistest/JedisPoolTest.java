@@ -17,7 +17,7 @@ public class JedisPoolTest {
     static {
         poolConfig = new GenericObjectPoolConfig();
         poolConfig.setMaxTotal(10);
-        poolConfig.setMaxWaitMillis(5000);
+        poolConfig.setMaxWaitMillis(50000);
 
         log.info("连接池中的默认参数，maxTotal:{}, maxIdle:{}, minIdle:{}, jmxEnabled:{}, ",
                 poolConfig.getMaxTotal(), poolConfig.getMaxIdle(), poolConfig.getMinIdle(),
