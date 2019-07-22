@@ -7,7 +7,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 /**
- *
+ *切面demo
  */
 @Slf4j
 @Aspect

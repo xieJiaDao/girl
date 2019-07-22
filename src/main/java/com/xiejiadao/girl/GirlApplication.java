@@ -17,7 +17,7 @@ public class GirlApplication extends WebMvcConfigurerAdapter {
     }
 
     /**
-     * 自定义拦截器使用
+     * 自定义过滤器使用
      * @return
      */
     @Bean
