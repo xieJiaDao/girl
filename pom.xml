@@ -30,6 +30,11 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
         <!-- spring 开启-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
