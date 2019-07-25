@@ -32,7 +32,12 @@ public class CountDownLatchExample2 {
             });
 
         }
-        countDownLatch.await(10, TimeUnit.MILLISECONDS );
+        boolean flag = countDownLatch.await(10, TimeUnit.MILLISECONDS );
+
+        if (flag)
+            log.info("CountDownLatch countdown 0");
+        else
+            log.info("CountDownLatch does not countDown 0 ");
 
         log.info("finish");
         //注意线程池不使用要shutdown

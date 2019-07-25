@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Aspect
 @Component
-public class authAspect {
+public class AuthAspect {
 
     @Pointcut("@annotation(com.xiejiadao.girl.annotations.AdminOnly)")
     public void adminOnly() {

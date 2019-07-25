@@ -33,7 +33,7 @@ public class NioClient {
         socketChannel.register(selector, SelectionKey.OP_READ);
         threadPool.execute(new NioClientHandler(selector));
         //2. 发送请求到服务端
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in,"UTF-8");
         while (scanner.hasNextLine()) {
             String request = scanner.nextLine();
             if (StringUtils.isNotEmpty(request)) {

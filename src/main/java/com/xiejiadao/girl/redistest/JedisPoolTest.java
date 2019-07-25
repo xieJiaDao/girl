@@ -40,7 +40,8 @@ public class JedisPoolTest {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            jedis.close();
+            if (jedis != null)
+                jedis.close();
         }
     }
 

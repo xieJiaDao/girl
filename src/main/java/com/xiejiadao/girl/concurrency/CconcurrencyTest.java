@@ -18,7 +18,7 @@ import java.util.concurrent.Semaphore;
 public class CconcurrencyTest {
 
     //请求总数
-    public static int clientTotal = 5000;
+    public static final int clientTotal = 5000;
     //并发执行的线程数
     public static int threadTotal = 200;
 

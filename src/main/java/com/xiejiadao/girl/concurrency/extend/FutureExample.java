@@ -31,7 +31,7 @@ public class FutureExample {
         //这个会阻塞，一直到获取结果
         String callableResult = future.get();
 
-        log.info("Future 获取到执行结果：{}", future.get());
+        log.info("Future 获取到执行结果：{}", callableResult);
 
 
     }
