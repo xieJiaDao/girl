@@ -37,7 +37,9 @@ public class ThreadPoolDesc {
          * --只有当workQueue满了的时候，才会创建核心线程之外的线程去执行任务。
          *
          * (5)workQueue 阻塞队列
-         * -- corepoolSize < threadNumber < maximumPoolSize ，新来的任务会放进阻塞队列
+         * -- corepoolSize < threadNumber < corepoolSize + workQueue.size  ，新来的任务会放进阻塞队列  maximumPoolSize
+         *
+         * corepoolSize + workQueue.size < threadNumber < maximumPoolSize , 新来的任务会创建核心线程之外的线程。
          *
          * (3)keepAliveTime 核心线程之外的线程没有执行任务的存活时间
          * (4)TimeUnit 存活时间单位
