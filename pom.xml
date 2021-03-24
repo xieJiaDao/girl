@@ -91,6 +91,12 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.1.1</version>
+        </dependency>
+
 
 
     </dependencies>
