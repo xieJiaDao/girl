@@ -2,6 +2,8 @@ package com.xiejiadao.girl.algorithm;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -20,8 +22,7 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V> {
 
     public LRUCache(int cacheSize) {
         super((int)Math.ceil(cacheSize/0.75) + 1, 0.75f, true);
-        //成员变量和临时变量同名，所以想给成员变量赋值的时候，得用this指明
-        this.cacheSize = cacheSize;
+        LRUCache.cacheSize = cacheSize;
     }
 
     /**
@@ -47,6 +48,7 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V> {
         lruCache.put("b", 4);
 
         log.info("LRUCache中的元素按照访问顺序：{}", lruCache.toString());
+        Map map = new HashMap();
     }
 
 
